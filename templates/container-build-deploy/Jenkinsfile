@@ -8,7 +8,7 @@ pipeline {
     timeout(time: 10, unit: 'MINUTES')
   }
   environment {
-    REPO_OWNER = "${repoOwner}"
+    REPO_OWNER = "${repoOwner}".toLowerCase()
     REPO_NAME = "${repository}"
     GITHUB_CREDENTIAL_ID = "${githubCredentialId}"
   }
